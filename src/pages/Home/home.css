@@ -1,0 +1,33 @@
+.page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    background-color: white;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(192, 192, 192, 0)
+}
+.char,
+.loc,
+.epi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    list-style: none;
+    text-decoration: none;
+    border: 2px solid rgb(5, 66, 41);
+    height: 50px;
+    width: 150px;
+    color: rgb(5, 66, 41);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(8, 204, 106);
+
+}
