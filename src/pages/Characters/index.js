@@ -18,16 +18,19 @@ export function Characters() {
     },[])
     console.log(characters)
     return ( 
+        <div className='charPage'>
+        <h1 className='text'>Characters</h1>
         <div className="content-box">
-        <h1>Characters</h1>
-
         {
             characters.map((currentCharacter)=>{
                 return (
-                    <Card character={currentCharacter}/>
+                    
+                    <Card character={currentCharacter} className="card"/>
+                    
                 );
             })
         }
+        </div>
         </div>
     );
 }
