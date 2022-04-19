@@ -1,4 +1,18 @@
 .content-box{
-    position: relative;
-    left:30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.charPage{
+    background-color: black;
+}
+.card{
+    margin-left: 10px;
 }
