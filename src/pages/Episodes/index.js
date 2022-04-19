@@ -1,22 +1,36 @@
+import { EpisodeCard } from '../../components/EpisodeCard' 
+import './style.modules.css'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 
+
 export function Episodes() {
     
-    const [episode, setEpisode] = useState([]);
+    const [episodes, setEpisodes] = useState([]);
     
     useEffect(()=>{
 
         async function fetchEpisode() {
             const response = await axios.get('https://rickandmortyapi.com/api/episode')
-            setEpisode(response.data.results)
+            setEpisodes(response.data.results)
         }
         fetchEpisode()
-        console.log(episode)
+        console.log(episodes)
     },[])
     
     return ( 
-        <h1>Episode</h1>
+        <><h1 style={{textAlign:"center"}}>Episodes</h1>
+        <div className="content-box">
+
+        {
+            episodes.map((currentEpisode)=>{
+                return (
+                    <EpisodeCard episode={currentEpisode}/>
+                );
+            })
+        }
+        </div>
+        </>
     );
 }
 

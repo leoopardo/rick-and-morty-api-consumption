@@ -1,23 +1,36 @@
+import { LocationCard } from '../../components/LocationCard'
+import './style.modules.css'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.css"; 
+
 
 export function Locations() {
     
-    const [location, setLocation] = useState([]);
+    const [locations, setLocations] = useState([]);
     
     useEffect(()=>{
 
         async function fetchLocation() {
             const response = await axios.get('https://rickandmortyapi.com/api/location')
-            setLocation(response.data.results)
+            setLocations(response.data.results)
         }
         fetchLocation()
-        console.log(location)
+        console.log(locations)
     },[])
     
     return ( 
-        <h1>Location</h1>
+        <><h1 style={{textAlign:"center"}}>Locations</h1>
+        <div className="content-box">
+
+        {
+            locations.map((currentLocation)=>{
+                return (
+                    <LocationCard location={currentLocation}/>
+                );
+            })
+        }
+        </div>
+        </>
     );
 }
 
