@@ -2,6 +2,7 @@ import { LocationCard } from '../../components/LocationCard'
 import './style.modules.css'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import { HomeButton } from '../../components/homeButton/Homebutton';
 
 
 export function Locations() {
@@ -19,7 +20,9 @@ export function Locations() {
     },[])
     
     return ( 
-        <><h1 style={{textAlign:"center"}}>Locations</h1>
+        <>
+        <HomeButton />
+        <h1 style={{textAlign:"center"}}>Locations</h1>
         <div className="content-box">
 
         {

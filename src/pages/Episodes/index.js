@@ -2,6 +2,7 @@ import { EpisodeCard } from '../../components/EpisodeCard'
 import './style.modules.css'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import { HomeButton } from '../../components/homeButton/Homebutton';
 
 
 export function Episodes() {
@@ -19,7 +20,9 @@ export function Episodes() {
     },[])
     
     return ( 
-        <><h1 style={{textAlign:"center"}}>Episodes</h1>
+        <>
+        <HomeButton />
+        <h1 style={{textAlign:"center"}}>Episodes</h1>
         <div className="content-box">
 
         {

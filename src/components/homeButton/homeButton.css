@@ -1,0 +1,8 @@
+.homeBtn{
+    height: 50px;
+}
+.homeDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
